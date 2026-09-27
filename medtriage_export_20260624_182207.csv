@@ -1,0 +1,2 @@
+id,patient_id,timestamp,name,age,gender,symptoms,detected_symptoms,ktas_level,input_method,status
+1,PT1782307309,2026-06-24T18:21:49.992926,John Doe,52,Male,I am experiencing really severe heavy crushing chest pain that spreads into my neck. I feel incredibly short of breath and lightheaded right now.,"{""heart_rate"": 98, ""systolic"": 142, ""diastolic"": 88, ""respiratory_rate"": 22, ""pain_scale"": 7}",4,Voice Transcript Simulation,completed

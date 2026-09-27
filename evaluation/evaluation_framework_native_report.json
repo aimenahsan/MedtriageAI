@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-08-12T05:42:11.176636",
+  "test_count": 414,
+  "overall_accuracy": "84.8%",
+  "per_class_accuracy": {
+    "KTAS 1": 65.38461538461539,
+    "KTAS 2": 89.85507246376811,
+    "KTAS 3": 91.2751677852349,
+    "KTAS 4": 84.16666666666667,
+    "KTAS 5": 70.0
+  },
+  "safety_metrics": {
+    "correct": 351,
+    "undertriage_count": 31,
+    "undertriage_rate": 7.487922705314009,
+    "overtriage_count": 32,
+    "overtriage_rate": 7.729468599033816,
+    "safety_score": 92.512077294686
+  },
+  "confidence_calibration": {
+    "actual_accuracy": 0.8478260869565217,
+    "average_confidence": 0.8781838189576558,
+    "calibration_error": 0.03035773200113412,
+    "is_well_calibrated": true
+  },
+  "feedback_summary": "No feedback collected"
+}

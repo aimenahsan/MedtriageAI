@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-12T05:42:11.198692",
+  "dataset_size": 414,
+  "dataset_description": "Held-out split of the procedurally-generated synthetic KTAS dataset (training/generate_synthetic_dataset.py). NOT the Moon et al. (2019) dataset.",
+  "overall_accuracy": 0.8478260869565217,
+  "cross_validation": null,
+  "per_class_accuracy": {
+    "KTAS 1": 0.6538461538461539,
+    "KTAS 2": 0.8985507246376812,
+    "KTAS 3": 0.912751677852349,
+    "KTAS 4": 0.8416666666666667,
+    "KTAS 5": 0.7
+  },
+  "safety_metrics": {
+    "undertriage_rate": 0.0748792270531401,
+    "overtriage_rate": 0.07729468599033816,
+    "exact_match_rate": 0.8478260869565217
+  },
+  "confidence_calibration": {
+    "actual_accuracy": 0.8478260869565217,
+    "average_confidence": 0.8781838189576558,
+    "calibration_error": 0.03035773200113412,
+    "is_well_calibrated": true
+  },
+  "avg_inference_time_ms": 0.014829174907887039,
+  "model": "XGBClassifier",
+  "edge_case_evaluation": {
+    "description": "Boundary-blended stress test (training/generate_synthetic_dataset.py::generate_edge_case_dataset) -- deliberately harder, ground truth derived from distance to each level's canonical vitals.",
+    "dataset_size": 300,
+    "accuracy": 0.7933333333333333
+  }
+}

@@ -1,0 +1,36 @@
+# MedTriageAI+ dependencies
+#
+# CHANGE NOTE: streamlit was pinned to 1.28.1, which predates st.audio_input
+# (needed for real voice recording -- added in Streamlit 1.40). xgboost and
+# shap were missing entirely even though the report describes both by name.
+# sqlalchemy, plotly, and joblib were listed but never actually imported
+# anywhere in the codebase, so they've been dropped to keep the install
+# lighter; add them back if you use them for something not covered here.
+#
+# Core app
+streamlit>=1.40
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# Prediction model + real explainability (pure-Python, no model downloads --
+# safe/fast to install anywhere)
+scikit-learn>=1.3
+xgboost>=2.0
+shap>=0.44
+
+# Voice input (optional at runtime -- app_production.py degrades to
+# text-only if these aren't installed, but install them for the real
+# voice -> Whisper -> transcript pipeline described in the report)
+openai-whisper>=20231117
+torch>=2.0
+torchaudio>=2.0
+librosa>=0.10
+
+# NLP symptom extraction (optional at runtime -- keyword matching still
+# works without these; install for the DistilBERT semantic-similarity layer)
+transformers>=4.35
+huggingface-hub>=0.20
+
+# Evaluation graphs (training/run_evaluation.py)
+matplotlib>=3.7
